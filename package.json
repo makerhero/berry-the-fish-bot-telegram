@@ -1,0 +1,16 @@
+{
+  "name": "berry-the-fish-server-telegram",
+  "version": "1.0.0",
+  "description": "Berry The Fish Server for Telegram",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giovanni Bauermeister",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.19.2",
+    "node-telegram-bot-api": "^0.29.0",
+    "rpio": "^0.9.19"
+  }
+}
