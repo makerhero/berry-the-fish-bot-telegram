@@ -82,7 +82,7 @@ Quer que te conte uma piada? hehe digite: 'conte uma piada'`;
                 bot.sendMessage(msg.chat.id, "eu sou um peixe Beta igual dessa foto aí!");  
             }, 2000);
             setTimeout(function() {
-                bot.sendPhoto(msg.chat.id, "/home/pi/berry-the-fish-server-telegram/bettafish.jpg");  
+                bot.sendPhoto(msg.chat.id, "/home/pi/berry-the-fish-bot-telegram/bettafish.jpg");  
             }, 3000);
         } 
     }  
@@ -100,7 +100,7 @@ Quer que te conte uma piada? hehe digite: 'conte uma piada'`;
     console.log(msg.chat.id);      
 });
 bot.onText(/\/berry/, (msg) => {    
-    var dateFromFile = fs.readFileSync('/home/pi/lastFoodDateTG.txt','utf8')
+    var dateFromFile = fs.readFileSync('/home/pi/berry-the-fish-bot-telegram/lastFoodDateTG.txt','utf8')
     console.log(dateFromFile);
     //if(currentDate == undefined) sendMessage("(berry) ainda não me deram comida :(", "green", false, "text");        
     //else sendMessage("(berry) me deram comida na " + dateFromFile, "yellow", false, "text");
@@ -115,7 +115,7 @@ bot.onText(/\/berry/, (msg) => {
  *  Salva a data da alimentação em arquivo 
  */
 function saveDateToFile(dateToSave) {
-    fs.writeFile("/home/pi/lastFoodDateTG.txt", dateToSave + "\n", function(err) {
+    fs.writeFile("/home/pi/berry-the-fish-bot-telegram/lastFoodDateTG.txt", dateToSave + "\n", function(err) {
         if(err) {
             return console.log(err);
         }    
